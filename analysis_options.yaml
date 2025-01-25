@@ -1,6 +1,9 @@
 include: package:lint/strict.yaml
 
 analyzer:
+  exclude:
+    - '**.freezed.dart'
+
   strong-mode:
     implicit-dynamic: false
 
@@ -13,6 +16,7 @@ analyzer:
     todo: info
     missing_required_param: error
     missing_return: error
+    invalid_annotation_target: ignore
 
 linter:
   rules:
