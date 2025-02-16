@@ -1,6 +1,6 @@
-import 'dart:math';
+import "dart:math";
 
-import 'package:flutter/rendering.dart';
+import "package:flutter/rendering.dart";
 
 Size calculateTextSize(
   String text, {
@@ -12,17 +12,11 @@ Size calculateTextSize(
   double maxWidth = double.infinity,
 }) {
   final textPainter = TextPainter(
-    text: TextSpan(
-      text: text,
-      style: style,
-    ),
+    text: TextSpan(text: text, style: style),
     textDirection: textDirection,
     textScaler: textScaler,
     maxLines: maxLines,
-  )..layout(
-      minWidth: minWidth,
-      maxWidth: maxWidth,
-    );
+  )..layout(minWidth: minWidth, maxWidth: maxWidth);
   final size = textPainter.size;
   return size;
 }
@@ -60,7 +54,7 @@ double calculateBottomPadding(
   required EdgeInsets viewPadding,
   required EdgeInsets viewInsets,
 }) {
-  var bottom = max(padding, viewPadding.bottom);
+  var bottom = max(viewPadding.bottom, padding);
   if (viewInsets.bottom >= bottom) bottom = padding;
   return bottom;
 }

@@ -1,8 +1,7 @@
-import 'package:provider/provider.dart';
+import "package:flutter_mgt_utils/src/view_model.dart";
+import "package:provider/provider.dart";
 
-import 'view_model.dart';
-
-export 'package:provider/provider.dart' show ReadContext;
+export "package:provider/provider.dart" show ReadContext;
 
 class ViewModelProvider<T extends ViewModel> extends Provider<T> {
   ViewModelProvider({
@@ -11,10 +10,10 @@ class ViewModelProvider<T extends ViewModel> extends Provider<T> {
     super.builder,
     super.child,
   }) : super(
-          lazy: false,
-          create: (context) => create(context)..init(),
-          dispose: (context, value) => value.dispose(),
-        );
+         lazy: false,
+         create: (context) => create(context)..init(),
+         dispose: (context, value) => value.dispose(),
+       );
 
   ViewModelProvider.value({
     super.key,

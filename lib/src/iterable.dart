@@ -1,7 +1,7 @@
 extension IterableSeparated<E> on Iterable<E> {
   Iterable<E> separated(E separator) {
     final iterator = this.iterator;
-    if (!iterator.moveNext()) throw Exception();
+    if (!iterator.moveNext()) return this;
     final value = [iterator.current];
     while (iterator.moveNext()) {
       value.add(separator);
