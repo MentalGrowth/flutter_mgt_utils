@@ -2,10 +2,10 @@ include: package:lint/strict.yaml
 
 analyzer:
   exclude:
-    - '**.freezed.dart'
-    - '**.g.dart'
-    - '**.gr.dart'
-    - '**.gen.dart'
+    - "**.freezed.dart"
+    - "**.g.dart"
+    - "**.gr.dart"
+    - "**.gen.dart"
 
   strong-mode:
     implicit-dynamic: false
