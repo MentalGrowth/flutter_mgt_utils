@@ -2,23 +2,14 @@ import "dart:math";
 
 import "package:flutter/rendering.dart";
 
-Size calculateTextSize(
-  String text, {
-  required TextStyle style,
-  required TextDirection textDirection,
-  required TextScaler textScaler,
-  int maxLines = 1,
-  double minWidth = 0,
-  double maxWidth = double.infinity,
+double calculateBottomPadding(
+  double padding, {
+  required EdgeInsets viewPadding,
+  required EdgeInsets viewInsets,
 }) {
-  final textPainter = TextPainter(
-    text: TextSpan(text: text, style: style),
-    textDirection: textDirection,
-    textScaler: textScaler,
-    maxLines: maxLines,
-  )..layout(minWidth: minWidth, maxWidth: maxWidth);
-  final size = textPainter.size;
-  return size;
+  var bottom = max(viewPadding.bottom, padding);
+  if (viewInsets.bottom >= bottom) bottom = padding;
+  return bottom;
 }
 
 int calculateMaxLines(
@@ -49,12 +40,21 @@ int calculateMaxLinesFromSize({
   return maxLines;
 }
 
-double calculateBottomPadding(
-  double padding, {
-  required EdgeInsets viewPadding,
-  required EdgeInsets viewInsets,
+Size calculateTextSize(
+  String text, {
+  required TextStyle style,
+  required TextDirection textDirection,
+  required TextScaler textScaler,
+  int maxLines = 1,
+  double minWidth = 0,
+  double maxWidth = double.infinity,
 }) {
-  var bottom = max(viewPadding.bottom, padding);
-  if (viewInsets.bottom >= bottom) bottom = padding;
-  return bottom;
+  final textPainter = TextPainter(
+    text: TextSpan(text: text, style: style),
+    textDirection: textDirection,
+    textScaler: textScaler,
+    maxLines: maxLines,
+  )..layout(minWidth: minWidth, maxWidth: maxWidth);
+  final size = textPainter.size;
+  return size;
 }

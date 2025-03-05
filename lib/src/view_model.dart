@@ -10,11 +10,11 @@ abstract class ViewModel implements Instantiatable, Disposable {
 
   @override
   @mustCallSuper
-  void init() {}
-
-  @override
-  @mustCallSuper
   void dispose() {
     _disposed = true;
   }
+
+  @override
+  @mustCallSuper
+  void init() {}
 }

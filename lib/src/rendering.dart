@@ -2,6 +2,18 @@ import "package:flutter/rendering.dart";
 
 class SliverGridDelegateWithFixedCrossAxisCountAndFixedHeight
     extends SliverGridDelegate {
+  /// The number of children in the cross axis.
+  final int crossAxisCount;
+
+  /// The number of logical pixels between each child along the main axis.
+  final double mainAxisSpacing;
+
+  /// The number of logical pixels between each child along the cross axis.
+  final double crossAxisSpacing;
+
+  /// The height of the crossAxis.
+  final double height;
+
   /// Creates a delegate that makes grid layouts with a fixed number of tiles in
   /// the cross axis.
   ///
@@ -17,26 +29,6 @@ class SliverGridDelegateWithFixedCrossAxisCountAndFixedHeight
        assert(mainAxisSpacing >= 0),
        assert(crossAxisSpacing >= 0),
        assert(height > 0);
-
-  /// The number of children in the cross axis.
-  final int crossAxisCount;
-
-  /// The number of logical pixels between each child along the main axis.
-  final double mainAxisSpacing;
-
-  /// The number of logical pixels between each child along the cross axis.
-  final double crossAxisSpacing;
-
-  /// The height of the crossAxis.
-  final double height;
-
-  bool _debugAssertIsValid() {
-    assert(crossAxisCount > 0);
-    assert(mainAxisSpacing >= 0.0);
-    assert(crossAxisSpacing >= 0.0);
-    assert(height > 0.0);
-    return true;
-  }
 
   @override
   SliverGridLayout getLayout(SliverConstraints constraints) {
@@ -63,5 +55,13 @@ class SliverGridDelegateWithFixedCrossAxisCountAndFixedHeight
         oldDelegate.mainAxisSpacing != mainAxisSpacing ||
         oldDelegate.crossAxisSpacing != crossAxisSpacing ||
         oldDelegate.height != height;
+  }
+
+  bool _debugAssertIsValid() {
+    assert(crossAxisCount > 0);
+    assert(mainAxisSpacing >= 0.0);
+    assert(crossAxisSpacing >= 0.0);
+    assert(height > 0.0);
+    return true;
   }
 }
