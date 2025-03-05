@@ -1,4 +1,3 @@
-// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -10,263 +9,323 @@ part of 'async_value.dart';
 // FreezedGenerator
 // **************************************************************************
 
-// dart format off
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
+
 /// @nodoc
-mixin _$AsyncValue<T> implements DiagnosticableTreeMixin {
+mixin _$AsyncValue<T> {}
 
-
-
-
-@override
-void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-  properties
-    ..add(DiagnosticsProperty('type', 'AsyncValue<$T>'))
-    ;
-}
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is AsyncValue<T>);
-}
-
-
-@override
-int get hashCode => runtimeType.hashCode;
-
-@override
-String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
-  return 'AsyncValue<$T>()';
-}
-
-
+/// @nodoc
+abstract class $AsyncValueCopyWith<T, $Res> {
+  factory $AsyncValueCopyWith(
+    AsyncValue<T> value,
+    $Res Function(AsyncValue<T>) then,
+  ) = _$AsyncValueCopyWithImpl<T, $Res, AsyncValue<T>>;
 }
 
 /// @nodoc
-class $AsyncValueCopyWith<T,$Res>  {
-$AsyncValueCopyWith(AsyncValue<T> _, $Res Function(AsyncValue<T>) __);
-}
+class _$AsyncValueCopyWithImpl<T, $Res, $Val extends AsyncValue<T>>
+    implements $AsyncValueCopyWith<T, $Res> {
+  _$AsyncValueCopyWithImpl(this._value, this._then);
 
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// @nodoc
-
-
-class Data<T> extends AsyncValue<T> with DiagnosticableTreeMixin {
-  const Data(this.value): super._();
-  
-
- final  T value;
-
-/// Create a copy of AsyncValue
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$DataCopyWith<T, Data<T>> get copyWith => _$DataCopyWithImpl<T, Data<T>>(this, _$identity);
-
-
-@override
-void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-  properties
-    ..add(DiagnosticsProperty('type', 'AsyncValue<$T>.data'))
-    ..add(DiagnosticsProperty('value', value));
-}
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Data<T>&&const DeepCollectionEquality().equals(other.value, value));
-}
-
-
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(value));
-
-@override
-String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
-  return 'AsyncValue<$T>.data(value: $value)';
-}
-
-
+  /// Create a copy of AsyncValue
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract mixin class $DataCopyWith<T,$Res> implements $AsyncValueCopyWith<T, $Res> {
-  factory $DataCopyWith(Data<T> value, $Res Function(Data<T>) _then) = _$DataCopyWithImpl;
-@useResult
-$Res call({
- T value
-});
-
-
-
-
+abstract class _$$DataImplCopyWith<T, $Res> {
+  factory _$$DataImplCopyWith(
+    _$DataImpl<T> value,
+    $Res Function(_$DataImpl<T>) then,
+  ) = __$$DataImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({T value});
 }
+
 /// @nodoc
-class _$DataCopyWithImpl<T,$Res>
-    implements $DataCopyWith<T, $Res> {
-  _$DataCopyWithImpl(this._self, this._then);
+class __$$DataImplCopyWithImpl<T, $Res>
+    extends _$AsyncValueCopyWithImpl<T, $Res, _$DataImpl<T>>
+    implements _$$DataImplCopyWith<T, $Res> {
+  __$$DataImplCopyWithImpl(
+    _$DataImpl<T> _value,
+    $Res Function(_$DataImpl<T>) _then,
+  ) : super(_value, _then);
 
-  final Data<T> _self;
-  final $Res Function(Data<T>) _then;
-
-/// Create a copy of AsyncValue
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') $Res call({Object? value = freezed,}) {
-  return _then(Data<T>(
-freezed == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
-as T,
-  ));
-}
-
-
+  /// Create a copy of AsyncValue
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? value = freezed}) {
+    return _then(
+      _$DataImpl<T>(
+        freezed == value
+            ? _value.value
+            : value // ignore: cast_nullable_to_non_nullable
+                as T,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
+class _$DataImpl<T> extends Data<T> with DiagnosticableTreeMixin {
+  const _$DataImpl(this.value) : super._();
 
-class Empty<T> extends AsyncValue<T> with DiagnosticableTreeMixin {
-  const Empty(): super._();
-  
+  @override
+  final T value;
 
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AsyncValue<$T>.data(value: $value)';
+  }
 
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AsyncValue<$T>.data'))
+      ..add(DiagnosticsProperty('value', value));
+  }
 
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DataImpl<T> &&
+            const DeepCollectionEquality().equals(other.value, value));
+  }
 
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(value));
 
-@override
-void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-  properties
-    ..add(DiagnosticsProperty('type', 'AsyncValue<$T>.empty'))
-    ;
+  /// Create a copy of AsyncValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DataImplCopyWith<T, _$DataImpl<T>> get copyWith =>
+      __$$DataImplCopyWithImpl<T, _$DataImpl<T>>(this, _$identity);
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Empty<T>);
-}
+abstract class Data<T> extends AsyncValue<T> {
+  const factory Data(final T value) = _$DataImpl<T>;
+  const Data._() : super._();
 
+  T get value;
 
-@override
-int get hashCode => runtimeType.hashCode;
-
-@override
-String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
-  return 'AsyncValue<$T>.empty()';
-}
-
-
-}
-
-
-
-
-/// @nodoc
-
-
-class Error<T> extends AsyncValue<T> with DiagnosticableTreeMixin {
-  const Error(this.err, this.st): super._();
-  
-
- final  Object err;
- final  StackTrace st;
-
-/// Create a copy of AsyncValue
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$ErrorCopyWith<T, Error<T>> get copyWith => _$ErrorCopyWithImpl<T, Error<T>>(this, _$identity);
-
-
-@override
-void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-  properties
-    ..add(DiagnosticsProperty('type', 'AsyncValue<$T>.error'))
-    ..add(DiagnosticsProperty('err', err))..add(DiagnosticsProperty('st', st));
-}
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Error<T>&&const DeepCollectionEquality().equals(other.err, err)&&(identical(other.st, st) || other.st == st));
-}
-
-
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(err),st);
-
-@override
-String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
-  return 'AsyncValue<$T>.error(err: $err, st: $st)';
-}
-
-
+  /// Create a copy of AsyncValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$DataImplCopyWith<T, _$DataImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $ErrorCopyWith<T,$Res> implements $AsyncValueCopyWith<T, $Res> {
-  factory $ErrorCopyWith(Error<T> value, $Res Function(Error<T>) _then) = _$ErrorCopyWithImpl;
-@useResult
-$Res call({
- Object err, StackTrace st
-});
-
-
-
-
+abstract class _$$EmptyImplCopyWith<T, $Res> {
+  factory _$$EmptyImplCopyWith(
+    _$EmptyImpl<T> value,
+    $Res Function(_$EmptyImpl<T>) then,
+  ) = __$$EmptyImplCopyWithImpl<T, $Res>;
 }
+
 /// @nodoc
-class _$ErrorCopyWithImpl<T,$Res>
-    implements $ErrorCopyWith<T, $Res> {
-  _$ErrorCopyWithImpl(this._self, this._then);
+class __$$EmptyImplCopyWithImpl<T, $Res>
+    extends _$AsyncValueCopyWithImpl<T, $Res, _$EmptyImpl<T>>
+    implements _$$EmptyImplCopyWith<T, $Res> {
+  __$$EmptyImplCopyWithImpl(
+    _$EmptyImpl<T> _value,
+    $Res Function(_$EmptyImpl<T>) _then,
+  ) : super(_value, _then);
 
-  final Error<T> _self;
-  final $Res Function(Error<T>) _then;
-
-/// Create a copy of AsyncValue
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') $Res call({Object? err = null,Object? st = null,}) {
-  return _then(Error<T>(
-null == err ? _self.err : err ,null == st ? _self.st : st // ignore: cast_nullable_to_non_nullable
-as StackTrace,
-  ));
-}
-
-
+  /// Create a copy of AsyncValue
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
+class _$EmptyImpl<T> extends Empty<T> with DiagnosticableTreeMixin {
+  const _$EmptyImpl() : super._();
 
-class Loading<T> extends AsyncValue<T> with DiagnosticableTreeMixin {
-  const Loading(): super._();
-  
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AsyncValue<$T>.empty()';
+  }
 
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'AsyncValue<$T>.empty'));
+  }
 
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$EmptyImpl<T>);
+  }
 
-
-
-@override
-void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-  properties
-    ..add(DiagnosticsProperty('type', 'AsyncValue<$T>.loading'))
-    ;
+  @override
+  int get hashCode => runtimeType.hashCode;
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Loading<T>);
+abstract class Empty<T> extends AsyncValue<T> {
+  const factory Empty() = _$EmptyImpl<T>;
+  const Empty._() : super._();
 }
 
-
-@override
-int get hashCode => runtimeType.hashCode;
-
-@override
-String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
-  return 'AsyncValue<$T>.loading()';
+/// @nodoc
+abstract class _$$ErrorImplCopyWith<T, $Res> {
+  factory _$$ErrorImplCopyWith(
+    _$ErrorImpl<T> value,
+    $Res Function(_$ErrorImpl<T>) then,
+  ) = __$$ErrorImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({Object err, StackTrace st});
 }
 
+/// @nodoc
+class __$$ErrorImplCopyWithImpl<T, $Res>
+    extends _$AsyncValueCopyWithImpl<T, $Res, _$ErrorImpl<T>>
+    implements _$$ErrorImplCopyWith<T, $Res> {
+  __$$ErrorImplCopyWithImpl(
+    _$ErrorImpl<T> _value,
+    $Res Function(_$ErrorImpl<T>) _then,
+  ) : super(_value, _then);
 
+  /// Create a copy of AsyncValue
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? err = null, Object? st = null}) {
+    return _then(
+      _$ErrorImpl<T>(
+        null == err ? _value.err : err,
+        null == st
+            ? _value.st
+            : st // ignore: cast_nullable_to_non_nullable
+                as StackTrace,
+      ),
+    );
+  }
 }
 
+/// @nodoc
 
+class _$ErrorImpl<T> extends Error<T> with DiagnosticableTreeMixin {
+  const _$ErrorImpl(this.err, this.st) : super._();
 
+  @override
+  final Object err;
+  @override
+  final StackTrace st;
 
-// dart format on
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AsyncValue<$T>.error(err: $err, st: $st)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AsyncValue<$T>.error'))
+      ..add(DiagnosticsProperty('err', err))
+      ..add(DiagnosticsProperty('st', st));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ErrorImpl<T> &&
+            const DeepCollectionEquality().equals(other.err, err) &&
+            (identical(other.st, st) || other.st == st));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(err), st);
+
+  /// Create a copy of AsyncValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ErrorImplCopyWith<T, _$ErrorImpl<T>> get copyWith =>
+      __$$ErrorImplCopyWithImpl<T, _$ErrorImpl<T>>(this, _$identity);
+}
+
+abstract class Error<T> extends AsyncValue<T> {
+  const factory Error(final Object err, final StackTrace st) = _$ErrorImpl<T>;
+  const Error._() : super._();
+
+  Object get err;
+  StackTrace get st;
+
+  /// Create a copy of AsyncValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ErrorImplCopyWith<T, _$ErrorImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LoadingImplCopyWith<T, $Res> {
+  factory _$$LoadingImplCopyWith(
+    _$LoadingImpl<T> value,
+    $Res Function(_$LoadingImpl<T>) then,
+  ) = __$$LoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$LoadingImplCopyWithImpl<T, $Res>
+    extends _$AsyncValueCopyWithImpl<T, $Res, _$LoadingImpl<T>>
+    implements _$$LoadingImplCopyWith<T, $Res> {
+  __$$LoadingImplCopyWithImpl(
+    _$LoadingImpl<T> _value,
+    $Res Function(_$LoadingImpl<T>) _then,
+  ) : super(_value, _then);
+
+  /// Create a copy of AsyncValue
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$LoadingImpl<T> extends Loading<T> with DiagnosticableTreeMixin {
+  const _$LoadingImpl() : super._();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AsyncValue<$T>.loading()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'AsyncValue<$T>.loading'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+}
+
+abstract class Loading<T> extends AsyncValue<T> {
+  const factory Loading() = _$LoadingImpl<T>;
+  const Loading._() : super._();
+}
